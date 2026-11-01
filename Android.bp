@@ -402,6 +402,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libexynosdisplay.so",
             ],
             shared_libs: [
+                "libutils-v32",
                 "liblog",
                 "libcutils",
                 "libhardware",
@@ -425,6 +426,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libexynosdisplay.so",
             ],
             shared_libs: [
+                "libutils-v32",
                 "liblog",
                 "libcutils",
                 "libhardware",
@@ -1572,6 +1574,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/sensors.sensorhub.so",
             ],
             shared_libs: [
+                "libutils-v32",
                 "android.frameworks.schedulerservice@1.0",
                 "libcutils",
                 "liblog",
