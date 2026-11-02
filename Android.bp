@@ -870,6 +870,47 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libvndsecril-client",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libvndsecril-client.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvndsecril-client.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "audio.primary.universal8895",
     owner: "samsung",
     strip: {
@@ -1358,33 +1399,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvndsecril-client",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libvndsecril-client.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libhardware_legacy",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libOMX.Exynos.AVC.Decoder",
     owner: "samsung",
     strip: {
@@ -1811,6 +1825,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@1.1-impl",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/android.hardware.gnss@1.1-impl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "android.hardware.gnss@1.0",
+                "android.hardware.gnss@1.1",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "android.hardware.keymaster@3.0-impl",
     owner: "samsung",
     strip: {
@@ -1834,6 +1880,34 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "android.hardware.keymaster@3.0",
                 "libskeymaster3device",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gps.default",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/gps.default.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -2271,6 +2345,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwrappergps",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libwrappergps.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libvndsecril-client",
+                "libsqlite",
+                "libhardware_legacy",
+                "libbinder",
+                "libsecnativefeature",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "sensors.bio",
     owner: "samsung",
     strip: {
@@ -2563,6 +2669,68 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "gpsd",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/gpsd",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhardware_legacy",
+                "libcutils",
+                "libssl",
+                "libcrypto",
+                "libwrappergps",
+                "android.frameworks.sensorservice@1.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "lhd",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/lhd",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
     soc_specific: true,
 }
 

@@ -20,6 +20,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal8895-common/proprietary/vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin \
     vendor/samsung/universal8895-common/proprietary/vendor/app/mcRegistry/ffffffffd00000000000000000000014.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/ffffffffd00000000000000000000014.tlbin \
     vendor/samsung/universal8895-common/proprietary/vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/ffffffffd00000000000000000000016.tlbin \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.slsi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.slsi.rc \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/nfc/sec_s3nrn82_rfreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nrn82_rfreg.bin \
@@ -28,6 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_delta_usacdma.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_usacdma.bin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_delta_usagsm.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_usagsm.bin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_se13.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_se13.bin \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/sensor/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensor/lhd.conf \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/wifi/bcmdhd_clm.blob:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd_clm.blob \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/wifi/bcmdhd_sta.bin_b0:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd_sta.bin_b0 \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/wifi/bcmdhd_sta.bin_b2:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd_sta.bin_b2 \
@@ -73,6 +76,7 @@ PRODUCT_PACKAGES += \
     libsecnativefeature \
     libsecril-client \
     libsemnativecarrierfeature \
+    libvndsecril-client \
     audio.primary.universal8895 \
     sound_trigger.primary.universal8895 \
     libExynosOMX_Core \
@@ -90,7 +94,6 @@ PRODUCT_PACKAGES += \
     libsamsungDiamondVoice \
     libsecaudioinfo \
     libstagefrighthw \
-    libvndsecril-client \
     libOMX.Exynos.AVC.Decoder \
     libOMX.Exynos.AVC.Encoder \
     libOMX.Exynos.HEVC.Decoder \
@@ -103,7 +106,9 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
     android.frameworks.schedulerservice@1.0 \
+    android.hardware.gnss@1.1-impl \
     android.hardware.keymaster@3.0-impl \
+    gps.default \
     keystore.mdfpp \
     libSemDataProps \
     libSemTelephonyProps \
@@ -118,6 +123,7 @@ PRODUCT_PACKAGES += \
     libsec-ril \
     libskeymaster3device \
     libsynaFpSensorTestNwd \
+    libwrappergps \
     sensors.bio \
     sensors.grip \
     sensors.sensorhub \
@@ -131,6 +137,8 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio_manifest_2_33.xml \
     vendor.samsung.hardware.sehradio_manifest_2_33.xml \
     cbd \
+    gpsd \
+    lhd \
     macloader \
     rild \
     mcDriverDaemon
