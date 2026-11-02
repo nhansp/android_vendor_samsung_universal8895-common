@@ -75,6 +75,8 @@ PRODUCT_PACKAGES += \
     libsemnativecarrierfeature \
     audio.primary.universal8895 \
     sound_trigger.primary.universal8895 \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
     libSamsungPostProcessConvertor \
     lib_SamsungRec_06006 \
     lib_SoundAlive_SRC384_ver320 \
@@ -82,11 +84,24 @@ PRODUCT_PACKAGES += \
     libaboxpcmdump \
     libaudio-ril \
     libaudio_soundtrigger \
+    libcsc \
     libdatamod \
     librecordalive \
     libsamsungDiamondVoice \
     libsecaudioinfo \
+    libstagefrighthw \
     libvndsecril-client \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder \
+    libOMX.Exynos.VP9.Encoder \
+    libOMX.Exynos.WMV.Decoder \
     android.frameworks.schedulerservice@1.0 \
     android.hardware.keymaster@3.0-impl \
     keystore.mdfpp \

@@ -939,6 +939,61 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libExynosOMX_Core",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libExynosOMX_Core.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosOMX_Resourcemanager",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libExynosOMX_Resourcemanager.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libSamsungPostProcessConvertor",
     owner: "samsung",
     strip: {
@@ -1132,6 +1187,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcsc",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcsc.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libexynosscaler",
+                "libexynosgscaler",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdatamod",
     owner: "samsung",
     strip: {
@@ -1246,6 +1328,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libstagefrighthw",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libstagefrighthw.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "libui",
+                "libstagefright_foundation",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvndsecril-client",
     owner: "samsung",
     strip: {
@@ -1268,6 +1380,402 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.AVC.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.AVC.Encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.HEVC.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.HEVC.Encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.MPEG4.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.MPEG4.Encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.VP8.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.VP8.Encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.VP9.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.VP9.Encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOMX.Exynos.WMV.Decoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libExynosOMX_Resourcemanager",
+                "libcsc",
+                "libexynosv4l2",
+                "libion_exynos",
+                "libhardware",
+                "libstagefright_foundation",
+                "android.hardware.graphics.mapper@2.0",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "omx",
     prefer: true,
     soc_specific: true,
 }
