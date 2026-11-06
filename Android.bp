@@ -931,7 +931,7 @@ cc_prebuilt_library_shared {
                 "libvndsecril-client",
                 "libaudio-ril",
                 "libtinyalsa",
-                "libaudioroute",
+                "libaudioroute-samsung",
                 "libsecaudioinfo",
                 "librecordalive",
                 "libSamsungPostProcessConvertor",
@@ -1075,7 +1075,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/lib_SamsungRec_06006.so",
             ],
             shared_libs: [
-                "libcompiler_rt",
+                "libcompiler_rt-samsung",
                 "libc",
                 "libm",
                 "libdl",
@@ -1230,7 +1230,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudioroute",
+    name: "libaudioroute-samsung",
     owner: "samsung",
     strip: {
         none: true,
@@ -1238,7 +1238,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libaudioroute.so",
+                "proprietary/vendor/lib/libaudioroute-samsung.so",
             ],
             shared_libs: [
                 "liblog",
@@ -1259,7 +1259,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcompiler_rt",
+    name: "libcompiler_rt-samsung",
     owner: "samsung",
     strip: {
         none: true,
@@ -1267,7 +1267,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libcompiler_rt.so",
+                "proprietary/vendor/lib/libcompiler_rt-samsung.so",
             ],
             shared_libs: [
                 "liblog",
