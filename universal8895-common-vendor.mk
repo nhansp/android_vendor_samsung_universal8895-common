@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
     libaboxpcmdump \
     libaudio-ril \
     libaudio_soundtrigger \
+    libaudioroute \
     libcsc \
     libdatamod \
     librecordalive \
