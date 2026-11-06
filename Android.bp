@@ -922,6 +922,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/hw/audio.primary.universal8895.so",
             ],
             shared_libs: [
+                "libprocessgroup",
                 "liblog",
                 "libutils",
                 "libcutils",
