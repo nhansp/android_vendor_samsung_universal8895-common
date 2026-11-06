@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Decoder \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
-    android.frameworks.schedulerservice@1.0 \
     android.hardware.gnss@1.1-impl \
     android.hardware.keymaster@3.0-impl \
     gps.default \
