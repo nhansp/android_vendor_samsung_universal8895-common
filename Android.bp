@@ -930,7 +930,7 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libvndsecril-client",
                 "libaudio-ril",
-                "libtinyalsa",
+                "libtinyalsa-samsung",
                 "libaudioroute-samsung",
                 "libsecaudioinfo",
                 "librecordalive",
@@ -965,7 +965,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libtinyalsa",
+                "libtinyalsa-samsung",
                 "libhardware",
                 "libc++",
                 "libc",
@@ -1155,7 +1155,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libtinyalsa",
+                "libtinyalsa-samsung",
                 "libutils",
                 "libdatamod",
                 "libhardware_legacy",
@@ -1215,7 +1215,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libtinyalsa",
+                "libtinyalsa-samsung",
                 "sound_trigger.primary.universal8895",
                 "libc++",
                 "libc",
@@ -1245,7 +1245,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libexpat",
-                "libtinyalsa",
+                "libtinyalsa-samsung",
                 "libc++",
                 "libc",
                 "libm",
@@ -1441,6 +1441,30 @@ cc_prebuilt_library_shared {
                 "libui",
                 "libstagefright_foundation",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtinyalsa-samsung",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libtinyalsa-samsung.so",
+            ],
+            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",

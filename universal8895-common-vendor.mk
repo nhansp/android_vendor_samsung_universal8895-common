@@ -96,6 +96,7 @@ PRODUCT_PACKAGES += \
     libsamsungDiamondVoice \
     libsecaudioinfo \
     libstagefrighthw \
+    libtinyalsa-samsung \
     libtinycompress \
     libOMX.Exynos.AVC.Decoder \
     libOMX.Exynos.AVC.Encoder \
