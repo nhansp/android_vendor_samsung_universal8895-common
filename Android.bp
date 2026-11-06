@@ -1075,6 +1075,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/lib_SamsungRec_06006.so",
             ],
             shared_libs: [
+                "libcompiler_rt",
                 "libc",
                 "libm",
                 "libdl",
@@ -1246,6 +1247,30 @@ cc_prebuilt_library_shared {
                 "libexpat",
                 "libtinyalsa",
                 "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcompiler_rt",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcompiler_rt.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc",
                 "libm",
                 "libdl",

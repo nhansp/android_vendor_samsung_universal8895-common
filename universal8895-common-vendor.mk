@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
     libaudio-ril \
     libaudio_soundtrigger \
     libaudioroute \
+    libcompiler_rt \
     libcsc \
     libdatamod \
     librecordalive \
