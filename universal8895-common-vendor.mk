@@ -88,8 +88,8 @@ PRODUCT_PACKAGES += \
     libaboxpcmdump \
     libaudio-ril \
     libaudio_soundtrigger \
-    libaudioroute \
-    libcompiler_rt \
+    libaudioroute-samsung \
+    libcompiler_rt-samsung \
     libcsc \
     libdatamod \
     librecordalive \
