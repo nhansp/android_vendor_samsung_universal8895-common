@@ -1853,43 +1853,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@3.0-impl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libsoftkeymasterdevice",
-                "libcrypto",
-                "libkeymaster_portable",
-                "libpuresoftkeymasterdevice",
-                "libkeymaster3device",
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "libhardware",
-                "android.hardware.keymaster@3.0",
-                "libskeymaster3device",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "gps.default",
     owner: "samsung",
     strip: {
@@ -1904,35 +1867,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "keystore.mdfpp",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/keystore.mdfpp.so",
-            ],
-            shared_libs: [
-                "libkeymaster_mdfpp",
-                "libkeymaster_helper",
-                "libcutils",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -2106,62 +2040,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster_helper",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkeymaster_helper.so",
-            ],
-            shared_libs: [
-                "libMcClient",
-                "libcutils",
-                "libcrypto",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libkeymaster_mdfpp",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkeymaster_mdfpp.so",
-            ],
-            shared_libs: [
-                "libkeymaster_helper",
-                "libcrypto",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqfp_sensortest",
     owner: "samsung",
     strip: {
@@ -2271,41 +2149,6 @@ cc_prebuilt_library_shared {
                 "libsemnativecarrierfeature",
                 "libc++",
                 "libprotobuf-cpp-full-3.9.1-vendorcompat",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libskeymaster3device",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libskeymaster3device.so",
-            ],
-            shared_libs: [
-                "libkeymaster_messages",
-                "libcrypto",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbase",
-                "libhidlbase",
-                "libhidltransport",
-                "libkeymaster_portable",
-                "android.hardware.keymaster@3.0",
-                "libkeymaster3device",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",

@@ -107,21 +107,16 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
     android.hardware.gnss@1.1-impl \
-    android.hardware.keymaster@3.0-impl \
     gps.default \
-    keystore.mdfpp \
     libSemDataProps \
     libSemTelephonyProps \
     libbauthserver \
     libbauthtzcommon \
     libegis_fp_normal_sensor_test \
     libgf_in_system_lib \
-    libkeymaster_helper \
-    libkeymaster_mdfpp \
     libqfp_sensortest \
     libril_sem \
     libsec-ril \
-    libskeymaster3device \
     libsynaFpSensorTestNwd \
     libwrappergps \
     sensors.bio \
