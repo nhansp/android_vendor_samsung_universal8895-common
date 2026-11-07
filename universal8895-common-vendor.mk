@@ -117,6 +117,7 @@ PRODUCT_PACKAGES += \
     libSemTelephonyProps \
     libbauthserver \
     libbauthtzcommon \
+    libcrypto-v28 \
     libegis_fp_normal_sensor_test \
     libgf_in_system_lib \
     libkeymaster_helper \

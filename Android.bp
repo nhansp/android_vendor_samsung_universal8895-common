@@ -2136,6 +2136,29 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcrypto-v28",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcrypto-v28.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libegis_fp_normal_sensor_test",
     owner: "samsung",
     strip: {
@@ -2198,7 +2221,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libMcClient",
                 "libcutils",
-                "libcrypto",
+                "libcrypto-v28",
                 "liblog",
                 "libc++",
                 "libc",
@@ -2225,7 +2248,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libkeymaster_helper",
-                "libcrypto",
+                "libcrypto-v28",
                 "libcutils",
                 "liblog",
                 "libc++",
