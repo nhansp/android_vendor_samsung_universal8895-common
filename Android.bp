@@ -870,6 +870,65 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libskeymaster3device",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libskeymaster3device.so",
+            ],
+            shared_libs: [
+                "libshim_keymaster_ctx",
+                "libkeymaster_messages",
+                "libcrypto",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libbase",
+                "libhidlbase",
+                "libhidltransport",
+                "libkeymaster_portable",
+                "android.hardware.keymaster@3.0",
+                "libkeymaster3device",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libskeymaster3device.so",
+            ],
+            shared_libs: [
+                "libshim_keymaster_ctx",
+                "libkeymaster_messages",
+                "libcrypto",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libbase",
+                "libhidlbase",
+                "libhidltransport",
+                "libkeymaster_portable",
+                "android.hardware.keymaster@3.0",
+                "libkeymaster3device",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvndsecril-client",
     owner: "samsung",
     strip: {
@@ -1932,43 +1991,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@3.0-impl",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libsoftkeymasterdevice",
-                "libcrypto",
-                "libkeymaster_portable",
-                "libpuresoftkeymasterdevice",
-                "libkeymaster3device",
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "libhardware",
-                "android.hardware.keymaster@3.0",
-                "libskeymaster3device",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "gps.default",
     owner: "samsung",
     strip: {
@@ -2373,41 +2395,6 @@ cc_prebuilt_library_shared {
                 "libsemnativecarrierfeature",
                 "libc++",
                 "libprotobuf-cpp-full-3.9.1-vendorcompat",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libskeymaster3device",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libskeymaster3device.so",
-            ],
-            shared_libs: [
-                "libkeymaster_messages",
-                "libcrypto",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbase",
-                "libhidlbase",
-                "libhidltransport",
-                "libkeymaster_portable",
-                "android.hardware.keymaster@3.0",
-                "libkeymaster3device",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",

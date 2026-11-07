@@ -76,6 +76,7 @@ PRODUCT_PACKAGES += \
     libsecnativefeature \
     libsecril-client \
     libsemnativecarrierfeature \
+    libskeymaster3device \
     libvndsecril-client \
     audio.primary.universal8895 \
     sound_trigger.primary.universal8895 \
@@ -110,7 +111,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
     android.hardware.gnss@1.1-impl \
-    android.hardware.keymaster@3.0-impl \
     gps.default \
     keystore.mdfpp \
     libSemDataProps \
@@ -125,7 +125,6 @@ PRODUCT_PACKAGES += \
     libqfp_sensortest \
     libril_sem \
     libsec-ril \
-    libskeymaster3device \
     libsynaFpSensorTestNwd \
     libwrappergps \
     sensors.bio \
