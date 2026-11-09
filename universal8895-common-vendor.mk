@@ -71,6 +71,7 @@ PRODUCT_PACKAGES += \
     libexynosutils \
     libexynosv4l2 \
     libfloatingfeature \
+    libhwc2on1adapter \
     libion_exynos \
     libmpp \
     libsecnativefeature \
