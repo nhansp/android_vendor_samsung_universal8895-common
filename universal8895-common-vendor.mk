@@ -22,9 +22,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal8895-common/proprietary/vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/ffffffffd00000000000000000000016.tlbin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
-    vendor/samsung/universal8895-common/proprietary/vendor/etc/init/vendor.samsung.rilchip.slsi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.slsi.rc \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/nfc/sec_s3nrn82_rfreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nrn82_rfreg.bin \
+    vendor/samsung/universal8895-common/proprietary/vendor/etc/pdpcnt-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pdpcnt-conf.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_delta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta.bin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_delta_attaio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_attaio.bin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/plmn_delta_usacdma.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_usacdma.bin \
@@ -65,6 +68,7 @@ PRODUCT_PACKAGES += \
     libGrallocWrapper \
     libMcClient \
     libacryl \
+    libengmode_client \
     libexynosdisplay \
     libexynosgscaler \
     libexynosscaler \
@@ -78,7 +82,9 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     libsemnativecarrierfeature \
     libskeymaster3device \
+    libvkmanager_vendor \
     libvndsecril-client \
+    vendor.samsung.hardware.radio.channel@2.0 \
     audio.primary.universal8895 \
     sound_trigger.primary.universal8895 \
     libExynosOMX_Core \
@@ -114,8 +120,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1-impl \
     gps.default \
     keystore.mdfpp \
-    libSemDataProps \
-    libSemTelephonyProps \
     libbauthserver \
     libbauthtzcommon \
     libcrypto-v28 \
@@ -124,21 +128,15 @@ PRODUCT_PACKAGES += \
     libkeymaster_helper \
     libkeymaster_mdfpp \
     libqfp_sensortest \
-    libril_sem \
+    libril \
     libsec-ril \
+    libsec_semRil \
     libsynaFpSensorTestNwd \
     libwrappergps \
     sensors.bio \
     sensors.grip \
     sensors.sensorhub \
-    vendor.samsung.hardware.radio-V1-ndk \
-    vendor.samsung.hardware.radio.bridge-V1-ndk \
-    vendor.samsung.hardware.radio.channel-V1-ndk \
-    vendor.samsung.hardware.radio.data-V1-ndk \
-    vendor.samsung.hardware.radio.messaging-V1-ndk \
-    vendor.samsung.hardware.radio.sim-V1-ndk \
-    vendor.samsung.hardware.radio.exclude.slsi.xml \
-    vendor.samsung.hardware.sehradio_manifest_2_33.xml \
+    vendor.samsung.hardware.radio.bridge@2.0 \
     cbd \
     gpsd \
     lhd \
