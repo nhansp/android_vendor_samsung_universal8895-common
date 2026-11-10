@@ -829,6 +829,53 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsecaudioinfo",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libsecaudioinfo.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libfloatingfeature",
+                "libsecnativefeature",
+                "libbinder",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsecaudioinfo.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libfloatingfeature",
+                "libsecnativefeature",
+                "libbinder",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsecnativefeature",
     owner: "samsung",
     strip: {
@@ -1013,6 +1060,41 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtinyalsa-samsung",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libtinyalsa-samsung.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtinyalsa-samsung.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvkmanager_vendor",
     owner: "samsung",
     strip: {
@@ -1136,7 +1218,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.universal8895",
+    name: "audio.primary.exynos8895",
     owner: "samsung",
     strip: {
         none: true,
@@ -1144,54 +1226,25 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/audio.primary.universal8895.so",
+                "proprietary/vendor/lib/hw/audio.primary.exynos8895.so",
             ],
             shared_libs: [
-                "libprocessgroup",
+                "libaudioparams_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
                 "libtinycompress",
                 "libaudioutils",
-                "libvndsecril-client",
+                "libexpat",
+                "libsecril-client",
                 "libaudio-ril",
+                "libprocessgroup",
                 "libtinyalsa-samsung",
                 "libaudioroute-samsung",
                 "libsecaudioinfo",
                 "librecordalive",
                 "libSamsungPostProcessConvertor",
                 "libsamsungDiamondVoice",
-                "libaudio_soundtrigger",
-                "libaboxpcmdump",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "sound_trigger.primary.universal8895",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/sound_trigger.primary.universal8895.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libtinyalsa-samsung",
-                "libhardware",
                 "libc++",
                 "libc",
                 "libm",
@@ -1314,6 +1367,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib_SoundAlive_3DPosition_ver202",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/lib_SoundAlive_3DPosition_ver202.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "lib_SoundAlive_SRC384_ver320",
     owner: "samsung",
     strip: {
@@ -1412,36 +1489,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libutils",
-                "libvndsecril-client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaudio_soundtrigger",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libaudio_soundtrigger.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libtinyalsa-samsung",
-                "sound_trigger.primary.universal8895",
+                "libsecril-client",
                 "libc++",
                 "libc",
                 "libm",
@@ -1619,7 +1667,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsecaudioinfo",
+    name: "libsecaudiocoreutils",
     owner: "samsung",
     strip: {
         none: true,
@@ -1627,15 +1675,9 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libsecaudioinfo.so",
+                "proprietary/vendor/lib/libsecaudiocoreutils.so",
             ],
             shared_libs: [
-                "libcutils",
-                "libutils",
-                "libfloatingfeature",
-                "libsecnativefeature",
-                "libbinder",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1666,30 +1708,6 @@ cc_prebuilt_library_shared {
                 "libui",
                 "libstagefright_foundation",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libtinyalsa-samsung",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libtinyalsa-samsung.so",
-            ],
-            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",
@@ -2724,8 +2742,8 @@ cc_prebuilt_binary {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libc++",
                 "libc",
+                "libc++",
                 "libm",
                 "libdl",
             ],
