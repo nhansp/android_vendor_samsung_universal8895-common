@@ -24,7 +24,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
-    vendor/samsung/universal8895-common/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/nfc/sec_s3nrn82_rfreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nrn82_rfreg.bin \
     vendor/samsung/universal8895-common/proprietary/vendor/etc/pdpcnt-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pdpcnt-conf.xml \
@@ -78,33 +77,33 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libion_exynos \
     libmpp \
+    libsecaudioinfo \
     libsecnativefeature \
     libsecril-client \
     libsemnativecarrierfeature \
     libskeymaster3device \
+    libtinyalsa-samsung \
     libvkmanager_vendor \
     libvndsecril-client \
     vendor.samsung.hardware.radio.channel@2.0 \
-    audio.primary.universal8895 \
-    sound_trigger.primary.universal8895 \
+    audio.primary.exynos8895 \
     libExynosOMX_Core \
     libExynosOMX_Resourcemanager \
     libSamsungPostProcessConvertor \
     lib_SamsungRec_06006 \
+    lib_SoundAlive_3DPosition_ver202 \
     lib_SoundAlive_SRC384_ver320 \
     lib_soundaliveresampler \
     libaboxpcmdump \
     libaudio-ril \
-    libaudio_soundtrigger \
     libaudioroute-samsung \
     libcompiler_rt-samsung \
     libcsc \
     libdatamod \
     librecordalive \
     libsamsungDiamondVoice \
-    libsecaudioinfo \
+    libsecaudiocoreutils \
     libstagefrighthw \
-    libtinyalsa-samsung \
     libtinycompress \
     libOMX.Exynos.AVC.Decoder \
     libOMX.Exynos.AVC.Encoder \
