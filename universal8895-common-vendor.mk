@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     libcrypto-v28 \
     libegis_fp_normal_sensor_test \
+    libflicker \
     libgf_in_system_lib \
     libkeymaster_helper \
     libkeymaster_mdfpp \
