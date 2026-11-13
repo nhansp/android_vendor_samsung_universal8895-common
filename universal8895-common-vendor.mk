@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
     libkeymaster_mdfpp \
     libqfp_sensortest \
     libril \
-    libsec-ril \
+    libsec-ril-impl \
     libsec_semRil \
     libsynaFpSensorTestNwd \
     libwrappergps \
