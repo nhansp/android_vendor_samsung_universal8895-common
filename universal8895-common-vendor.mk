@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
     libcompiler_rt-samsung \
     libcsc \
     libdatamod \
+    libprofileparamstorage \
     librecordalive \
     libsamsungDiamondVoice \
     libsecaudiocoreutils \
@@ -139,9 +140,14 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Decoder \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
+    libswdap \
     android.hardware.gnss@1.1-impl \
     gps.default \
     keystore.mdfpp \
+    libFaceService \
+    libIrisLibrary_preview \
+    libIrisService \
+    libIrisTlc \
     libbauthserver \
     libbauthtzcommon \
     libbt-vendor \
@@ -155,6 +161,7 @@ PRODUCT_PACKAGES += \
     libril \
     libsec-ril-impl \
     libsec_semRil \
+    libsecfr_engine \
     libsynaFpSensorTestNwd \
     libwrappergps \
     sensors.bio \
