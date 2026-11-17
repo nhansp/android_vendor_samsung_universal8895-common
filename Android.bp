@@ -3163,3 +3163,17 @@ cc_prebuilt_binary {
     prefer: true,
     soc_specific: true,
 }
+
+install_symlink {
+    name: "vendor_lib_hw_vulkan_exynos5_so",
+    soc_specific: true,
+    installed_location: "lib/hw/vulkan.exynos5.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "vendor_lib64_hw_vulkan_exynos5_so",
+    soc_specific: true,
+    installed_location: "lib64/hw/vulkan.exynos5.so",
+    symlink_target: "/vendor/lib64/egl/libGLES_mali.so",
+}

@@ -175,3 +175,7 @@ PRODUCT_PACKAGES += \
     mfgloader \
     rild \
     mcDriverDaemon
+
+PRODUCT_PACKAGES += \
+    vendor_lib_hw_vulkan_exynos5_so \
+    vendor_lib64_hw_vulkan_exynos5_so
